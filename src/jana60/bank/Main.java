@@ -13,18 +13,18 @@ public class Main {
 		System.out.println("\n---------------------------\n");
 		System.out.println("Quale operazione vuoi eseguire? (prelievo/deposito)");
 		String operation = scn.nextLine(); 
-		if (operation == "deposito") {
+
+			System.out.println("----------------");
 			System.out.println("Inserisci cifra da depositare");
 			int deposit = scn.nextInt();
 			conto.addMoney(deposit);
 			System.out.println("Operazione completata, saldo attuale: " + conto.getSaldo() + conto.eur);
-		}
-		else if (operation == "prelievo") {
+
 			System.out.println("Inserisci cifra da prelevare");
 			int prelievo = scn.nextInt();
 			conto.getMoney(prelievo);
 			System.out.println("Operazione completata, saldo attuale: " + conto.getSaldo() + conto.eur);
-		} 
+		
 		scn.close();
 	}
 }

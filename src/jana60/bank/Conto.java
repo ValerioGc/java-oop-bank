@@ -15,7 +15,7 @@ public class Conto {
 		this.numeroConto = rnd.nextInt(90000) + 10000;
 	}
 	
-// Getters Setters nome proprietareio
+// Getters e Setters nome proprietareio
 	public String getNomeProprietario() {
 		return nomeProprietario;
 	}
@@ -23,6 +23,7 @@ public class Conto {
 		this.nomeProprietario = nomeProprietario;
 	}
 		
+	
 // Getters saldo e conto
 	public int getNumeroConto() {
 		return numeroConto;
@@ -37,8 +38,8 @@ public class Conto {
 		this.saldo += deposit;
 	}
 	public void getMoney(int prelievo) {
-		if (this.saldo - prelievo <= 0) {
-			this.saldo += prelievo;
+		if (this.saldo - prelievo >= 0) {
+			this.saldo -= prelievo;
 		} else {
 			System.out.println("Saldo non sufficiente");
 		}
@@ -46,13 +47,11 @@ public class Conto {
 
 	
 	
-	
 	@Override
 	public String toString() {
 		return "Proprietario Conto: " + getNomeProprietario() +
 				"\nNumero Conto: " + getNumeroConto() +
 				"\nIl saldo attuale è di: " + getSaldo() + eur ;
-
 	}
 }
 
