@@ -7,12 +7,13 @@ public class Conto {
 	
 	private int numeroConto;
 	private String nomeProprietario;
-	private int saldo = 0;
+	private int saldo;
 	public char eur = '\u20ac';
 	
 	public Conto() {
 		Random rnd = new Random();
 		this.numeroConto = rnd.nextInt(90000) + 10000;
+		this.saldo = 0;
 	}
 	
 // Getters e Setters nome proprietareio

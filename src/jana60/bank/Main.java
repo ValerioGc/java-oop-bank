@@ -11,19 +11,21 @@ public class Main {
 		conto.setNomeProprietario(nomeProprietrario);
 		System.out.println(conto);
 		System.out.println("\n---------------------------\n");
+		
 		System.out.println("Quale operazione vuoi eseguire? (prelievo/deposito)");
 		String operation = scn.nextLine(); 
-
-			System.out.println("----------------");
+		if (operation.equals("deposito")) {
 			System.out.println("Inserisci cifra da depositare");
 			int deposit = scn.nextInt();
 			conto.addMoney(deposit);
 			System.out.println("Operazione completata, saldo attuale: " + conto.getSaldo() + conto.eur);
-
+		}
+		else if (operation.equals("prelievo")) {
 			System.out.println("Inserisci cifra da prelevare");
 			int prelievo = scn.nextInt();
 			conto.getMoney(prelievo);
 			System.out.println("Operazione completata, saldo attuale: " + conto.getSaldo() + conto.eur);
+		} 
 		
 		scn.close();
 	}
